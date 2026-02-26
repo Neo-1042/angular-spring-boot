@@ -58,3 +58,26 @@ real-time applications**.
 
 This is actually the main reason why we have frameworks such
 as **Angular, React.js, Vue.js, ...**
+
+# Development Environment Setup
+
+- Most Angular developers use TypeScript (Superset of JS)
+
+|  Tool   |   Purpose  |
+| :---    | :---       |
+| `node`  | Running JavaScript code from the command-line.  |
+| `npm`   | Node Package Manager -> Download new node packages and features. Similar to `maven`.  |
+| `tsc`   | TypeScript compiler.   |
+| `nvm`   | Node Version Manager -> Allows to have multiple versions of Node installed  |
+
+[www.luv2code.com/angular-install-guides](www.luv2code.com/angular-install-guides)
+
+## Software to be Installed
+
+- Visual Studio Code
+- nvm 0.35.0 =>
+- npm 7.24.0
+- node 16.10.0
+- tsc 4.6.4
+- Angular 14
+- Spring Boot 2.7.1
