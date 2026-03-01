@@ -75,9 +75,26 @@ as **Angular, React.js, Vue.js, ...**
 ## Software to be Installed
 
 - Visual Studio Code
-- nvm 0.35.0 =>
+- nvm 0.35.0 (manage multiple Node versions)
+- node 16.10.0 (includes npm)
 - npm 7.24.0
-- node 16.10.0
 - tsc 4.6.4
 - Angular 14
 - Spring Boot 2.7.1
+
+### Installation (basic guideline)
+
+```bash
+# Install Node Version Manager
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.0/install.sh | bash
+# Verify
+nvm --version
+
+# Install Node (includes npm)
+nvm install node
+# Verify
+node --version
+npm --version
+
+# Install tsc
+```
