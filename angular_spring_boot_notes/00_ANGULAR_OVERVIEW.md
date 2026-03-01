@@ -77,7 +77,7 @@ as **Angular, React.js, Vue.js, ...**
 - Visual Studio Code
 - nvm 0.35.0 (manage multiple Node versions)
 - node 16.10.0 (includes npm)
-- npm 7.24.0
+- npm 7.24.0 (you can use this to install tsc)
 - tsc 4.6.4
 - Angular 14
 - Spring Boot 2.7.1
@@ -97,4 +97,38 @@ node --version
 npm --version
 
 # Install tsc
+# -g = global package; tsc will be available for all
+# directories of the current user
+npm install -g typescript@4.6.4
+
+# Verify tsc installation
+tsc --version
+```
+
+# TypeScript Overview
+
+TypeScript is a PL built on top of JavaScript, developed
+by Microsoft in 2012.  
+TypeScript provides static typing support for JavaScript.  
+TypeScript adds support for OOP.
+
+[Official TypeScript Documentation](www.typescriptlang.org)
+
+## Angular Development (TypeScript!)
+
+Angular allows you to develop in the following languages
+
+- JavaScript
+- ECMAScript (ES6, ES9, ...)
+- **TypeScript**
+- Dart
+
+However, **TypeScript** is the most popular language for
+Angular Development, because TypeScript is a strongly-typed
+language with **compile time checking** and IDE support.
+In fact, the Angular framework itself is developed with
+TypeScript.
+
+```latex
+JavaScript \subset ECMAScript \subset TypeScript
 ```
