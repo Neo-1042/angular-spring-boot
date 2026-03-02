@@ -132,3 +132,24 @@ TypeScript.
 ```latex
 JavaScript \subset ECMAScript \subset TypeScript
 ```
+
+TypeScript file extension = `*.ts`
+
+- Web browsers do not understand TypeScript natively.
+Thus, it is necessary to convert, or **transpile** TypeScript
+code into JavaScript code.
+
+By using the `tsc`:  
+`mydemo.ts` ---> `mydemo.js`
+
+```bash
+# Transpile the source code
+tsc mydemo.ts
+# Generates "mydemo.js"
+
+# Run the *.js code
+node mydemo.js
+```
+
+`tsc` can find errors earlier, at compilation time, instead
+of at runtime.
