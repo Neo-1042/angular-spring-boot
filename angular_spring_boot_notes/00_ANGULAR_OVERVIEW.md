@@ -153,3 +153,12 @@ node mydemo.js
 
 `tsc` can find errors earlier, at compilation time, instead
 of at runtime.
+
+### *Careful
+
+Even if your code has syntax errors, tsc will still generate
+a *.js file. To prevent this, add this:
+
+```bash
+tsc -noEmitOnError file.ts
+```
