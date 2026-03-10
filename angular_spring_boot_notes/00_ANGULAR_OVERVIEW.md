@@ -44,10 +44,10 @@ Angular 4, 5, 6, 7, 8 are incremental improvements of Angular 2.
 
 Major release every 6 months.
 
-2022 -> Angular 15
-2023 -> Angular 16
-...
-2026 -> Angular 21
+2022 -> Angular 15  
+2023 -> Angular 16  
+...  
+2026 -> Angular 21  
 
 Could I not just do everything myself with **JavaScript, jQuery,
 AJAX**, etc.?  
