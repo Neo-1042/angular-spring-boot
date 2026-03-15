@@ -31,3 +31,6 @@ target/
 
 ### Mac OS ###
 .DS_Store
+
+# Ignore *.js produced from TypeScript (tsc) including any subfolders
+typescript_training/**/*.js
