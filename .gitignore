@@ -34,3 +34,5 @@ target/
 
 # Ignore *.js produced from TypeScript (tsc) including any subfolders
 typescript_training/**/*.js
+
+typescript_training/dist/
