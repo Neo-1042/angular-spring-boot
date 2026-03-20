@@ -57,3 +57,31 @@ generate a *.js file if the TypeScript has compilation error.
 ```bash
 tsc --noEmitOnError Customer.ts
 ```
+
+# Constructors. Parameter Properties
+
+Traditional Approach:
+```typescript
+class Customer {
+
+    private _firstName: string;
+    private _lastName: string;
+
+    constructor(theFirst:string, theLast:string) {
+        this._firstName = theFirst;
+        this._lastName = theLast;
+    }
+}
+```
+
+Short Cut Approach:
+```typescript
+class Customer {
+
+    // Define the properties and assign automatically.
+    constructor(private _firstName:string,
+                private _lastName: string){
+
+    }  
+}
+```
