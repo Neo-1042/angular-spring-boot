@@ -44,6 +44,31 @@ myCustomer._firstName = "Neo"; // This actually calls the setter method
 console.log("Hello, " + myCustomer.toString());
 ```
 
+# Accessors Syntax
+
+The concept and implementation of getter and setter methods in
+TypeScript is very similar to Java, with one or two key
+differences:
+
+```typescript
+class Planet {
+
+    // Short cut version
+    constructor (private _temperature : number) { }
+
+    // Getter
+    get temperature() : number {
+        return this._temperature;
+    }
+
+    // Setter
+    // !! NO RETURN TYPE !! (not even 'void')
+    set temperature(temperature : number) {
+        this._temperature = temperature;
+    }
+}
+```
+
 # Access Modifiers
 
 | Modifier | Definition | 
