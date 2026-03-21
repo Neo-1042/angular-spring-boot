@@ -64,3 +64,14 @@ Then, simply run:
 tsc # That's it.
 node dist/MyClass.js
 ```
+
+# Clean the House First
+
+```bash
+tsc --build --clean
+# Compile all *.ts files
+tsc
+
+# Run
+node dist/MyClass.js
+```
