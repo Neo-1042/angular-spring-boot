@@ -15,15 +15,11 @@ Customer class
     node 03_classes.js
 */
 
-class Customer {
-    // Properties are PUBLIC by default
-    private _firstName: string;
-    private _lastName: string;
-    //  Constructors
-    constructor(firstName: string, lastName: string) {
-        this._firstName = firstName;
-        this._lastName = lastName;
-    }
+export class Customer {
+    //  New Constructor (Parameter Properties)
+    constructor(private _firstName: string
+                ,private _lastName: string) { }
+
     // Getters and setters (public by default)
     get firstName(): string {
         return this._firstName;
@@ -33,6 +29,8 @@ class Customer {
         return this._lastName;
     }
 
+    // Note that setters have NO RETURN TYPE
+    // Not even void
     set firstName(newFirstName: string) {
         this._firstName = newFirstName;
     }
@@ -48,6 +46,7 @@ class Customer {
 
 let myCustomer = new Customer("Rodrigo", "Hurtado");
 
-myCustomer.firstName = "Neo"; // Calls the setter
+myCustomer.firstName = "Mr."; // Calls the setter
+myCustomer.lastName = "Robot";
 
 console.log("Hello, " + myCustomer.toString());

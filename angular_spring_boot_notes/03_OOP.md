@@ -110,3 +110,147 @@ class Customer {
     }  
 }
 ```
+
+# Inheritance in TypeScript
+
+- Superclass > Subclass extend the parent's properties and
+methods.
+
+- Support for abstract classes and overriding.
+
+> TypeScript only supports **single inheritance**
+
+> However, you can implement multiple interfaces.
+
+## Example: Circle, Rectangle implements Shape
+
+File = Shape.ts
+```typescript
+export class Shape {
+    private _x : number;
+    private _y : number;
+
+    constructor(x : number, y : number) {
+        this._x = x;
+        this._y = y;
+    }
+
+    get x () : number {
+        return this._x;
+    }
+
+    set x (x : number) {
+        this._x = x;
+    }
+
+    get y () : number {
+        return this._y;
+    }
+
+    set y (y : number) {
+        this._y = y;
+    }
+
+    getInfo() : string {
+        return "x = " + this._x + " , y = " + this._y;
+    }
+}
+```
+
+File = Circle.ts
+
+```typescript
+import { Shape } from './Shape';
+
+export class Circle extends Shape {
+
+    // Will inherit Shape's attributes and methods.
+    // Plus, it will add:
+    private _radius : number;
+
+    // super constructor from Shape
+    constructor(x : number, y : number, r : radius) {
+        super(x, y);
+        this._radius = r;
+    }
+
+    get radius() : number {
+        return this._radius;
+    }
+
+    set radius(radius : number) {
+        this._radius = radius;
+    }
+
+    // Override (no keyword needed)
+    getInfo() : string {
+        return super.getInfo() + ", radius = " + this._radius;
+    }
+}
+```
+
+```typescript
+import { Shape } from './Shape';
+
+export class Rectangle extends Shape {
+
+    private _width : number;
+    private _length : number;
+
+    constructor(x : number, y : number, width : number, length : number) {
+        super(x, y);
+        this._width = width;
+        this._length = length;
+    }
+
+    get width() : number {
+        return this._width;
+    }
+
+    set width(width : number) {
+        this._width = width;
+    }
+
+    get length() : number {
+        return this._length;
+    }
+
+    set length(length : number) {
+        this._length = length;
+    }
+
+    getInfo() : string {
+        return super.getInfo() + " width = " + this._width
+                + " , length = " + this._length;
+    }
+}
+```
+
+
+File = Driver.ts (Main app using Shape + Circle + Rectangle)
+```typescript
+import { Shape } from './Shape';
+import { Circle } from './Circle';
+import { Rectangle } from './Rectangle';
+
+let myShape = new Shape(10,7);
+let myCircle = new Circle(3,4,9);
+let myRectanlge = new Rectangle(2,3,4,5);
+
+console.log("My Shape: " + myShape.getInfo());
+console.log("My Circle: " + myCircle.getInfo());
+console.log("My Rectangle: " + myRectangle.getInfo());
+
+// Create an ARRAY of shapes
+
+// Empty array that only accepts Shape classes and subclasses:
+let theShapes : Shape[] = [];
+
+theShapes.push(myShape);
+theShapes.push(myCircle);
+theShapes.push(myRectangle);
+
+for (let tmpShape of theShapes) {
+    console.log(tmpShape.getInfo());
+}
+```
