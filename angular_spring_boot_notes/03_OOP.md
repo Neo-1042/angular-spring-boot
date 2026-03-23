@@ -169,7 +169,7 @@ export class Circle extends Shape {
     private _radius : number;
 
     // super constructor from Shape
-    constructor(x : number, y : number, r : radius) {
+    constructor(x : number, y : number, r : number) {
         super(x, y);
         this._radius = r;
     }
@@ -189,6 +189,7 @@ export class Circle extends Shape {
 }
 ```
 
+File = Rectangle.ts extends Shape.ts
 ```typescript
 import { Shape } from './Shape';
 
@@ -235,7 +236,7 @@ import { Rectangle } from './Rectangle';
 
 let myShape = new Shape(10,7);
 let myCircle = new Circle(3,4,9);
-let myRectanlge = new Rectangle(2,3,4,5);
+let myRectangle = new Rectangle(2,3,4,5);
 
 console.log("My Shape: " + myShape.getInfo());
 console.log("My Circle: " + myCircle.getInfo());
