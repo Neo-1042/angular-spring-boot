@@ -162,3 +162,113 @@ a *.js file. To prevent this, add this:
 ```bash
 tsc -noEmitOnError file.ts
 ```
+
+# Angular Features (After TypeScript Training)
+
+- The Angular framework is a **component-based framework**.
+- Clean separation between template coding and application
+logic.
+- Built-in support for **data-binding** and dependency injection.
+- Supports responsive web design and modern frameworks  
+(Bootstrap, Google Material Design (Angular Material), ...)
+
+# Angular Architecture
+
+```mermaid
+flowchart TB
+    A["Components"] ---> B["Child Component"]
+    A ---> C["Child Component"]
+    A ---> D["Child Component"]
+```
+
+- "Components" can make use of "View Templates" ---> 
+"Directives" (to modify the behavior of these templates).
+
+- You can also write "Services" as a client-side code.
+- Modules -> Collection of related components, services,
+directives, etc.
+
+# Key Terms in Angular Development
+
+| Term    | Definition |
+| :---:   | :---       |
+| **Component** | Main player in an Angular applications. It has two parts:</br>1. View for the user interface.</br>2. Class that contains the application logic/event handling for the view. |
+| **View Template** | The user interface for the component.</br>Static HTML + dynamic elements. |
+| **Directive** | Adds custom behavior to HTML elements.</br> Used for looping, conditionals, etc.  |
+| **Service** (TypeScript) | A helper class that provides the desired functionality.</br>Retrieving data from a server, performing a calculation or validation and so on. |
+| **Module** | A collection of related components, directives, services, etc. |
+
+# Application UI Composition Example
+
+![Angular Components](resources/Angular_Components_Example.jpeg)
+
+# Application Interaction
+
+```mermaid
+flowchart LR
+    A["Services</br>(TypeScript)"] <--> B["Angular</br>Project"]
+    <--> C["Spring Boot"]
+    <--> D[(DB)]
+```
+
+# Creating an Angular Project
+
+[http://cli.angular.io](http://cli.angular.io)
+
+CLI = Command-Line Interface
+
+## Installing the Angular CLI (`ng`)
+
+```bash
+npm install --location=global @angular/cli@14.0.7
+ng version
+ng help
+```
+
+## Creating a New Angular Project
+
+```bash
+# ng new <new-project_name>
+ng new my-first-angular-project
+```
+
+## Run the Project: `ng serve`
+
+1. Build the app (compile/transpile).
+2. Starts the server.
+3. Watches the source files.
+4. Rebuilds the apps when source is updated (hot reload).
+
+```bash
+cd my-first-angular-project
+ng serve
+# The server listens on port 4200
+# http://localhost:4200
+
+# Opens up a web browser for you.
+ng serve --open
+
+# Modify the port
+ng serve --port 5100 --open
+```
+
+## Files in an Angular Project
+
+1. `*.html`, `*.css`, `*.ts`
+2. `angular.json` --> Contains the Angular workspace
+configuration and the list of **execution targets**.
+3. `node_modules/` --> (folder) contains a local repository
+of the node modules.
+4. `package.json` (`pom.xml` for Java) --> Project meta data. List of
+**node dependencies**.
+5. `src/` --> Main source code directory.
+6. `app/` --> App components, templates.
+7. `assets/` --> Images, videos, etc.
+8. `environments/` --> Profiles (Spring) for different
+environments  
+(DEV > SIT > UAT > PERF > PROD > COB).
+9. `index.html` --> Main launch page.
+10. `polyfills.ts` --> Adds support for different browsers.
+11. `test.ts` --> Unit test cases for the entire app.
+12. `tsconfig.json` --> Flags and options to compile TypeScript
+code into JavaScript (transpilation).
