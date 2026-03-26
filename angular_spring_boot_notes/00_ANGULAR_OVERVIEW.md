@@ -220,7 +220,12 @@ CLI = Command-Line Interface
 ## Installing the Angular CLI (`ng`)
 
 ```bash
-npm install --location=global @angular/cli@14.0.7
+# npm install --location=global @angular/cli@14.0.7
+# Install a compatible version of Node:
+nvm install 16.20.2
+nvm use 16.20.2
+# Install the latest Angular CLI
+npm install -g @angular/cli@latest
 ng version
 ng help
 ```
