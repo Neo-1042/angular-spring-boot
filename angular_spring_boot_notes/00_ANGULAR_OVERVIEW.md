@@ -235,6 +235,8 @@ ng help
 ```bash
 # ng new <new-project_name>
 ng new my-first-angular-project
+# From Angular 17, you need to use:
+ng new --no-standalone my-first-angular-project
 ```
 
 ## Run the Project: `ng serve`
