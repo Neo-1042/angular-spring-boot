@@ -37,3 +37,34 @@ File = src/app/component.html
 ```html
 <span>{{ title }} app is running! SUCCESS!!!</span>
 ```
+
+## Step-by-Step Initial File Load
+
+```mermaid
+flowchart LR
+    A["src/index.html"] --> B["src/app/app-module.ts"]
+        --> C["src/app/app.ts"]
+        --> D["src/app/app.html"]
+```
+
+You can add properties in the `app.ts` (component) file:
+
+File = src/app/app.ts
+```typescript
+import { Component, signal } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.html',
+  standalone: false,
+  styleUrl: './app.css'
+})
+export class App {
+  protected readonly title = signal('my-first-angular-project');
+
+  firstName: string = "Rodrigo";
+  lastName: string = "Hurtado";
+}
+```
+
+and then use these properties in the src/app/app.html file.

@@ -8,4 +8,7 @@ import { Component, signal } from '@angular/core';
 })
 export class App {
   protected readonly title = signal('my-first-angular-project');
+
+  firstName: string = "Rodrigo";
+  lastName: string = "Hurtado";
 }
