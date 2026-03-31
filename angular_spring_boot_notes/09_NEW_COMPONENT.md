@@ -9,6 +9,8 @@ of data.
 ```bash
 ng new sales-project
 cd sales-project
+# From Angular 17, you need:
+# ng new --no-standalone sales-project
 ```
 
 ## 2. Update main template page.  
