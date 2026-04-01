@@ -4,7 +4,7 @@ import { SalesPerson } from './sales-person';
 @Component({
   selector: 'app-sales-person-list',
   standalone: false,
-  templateUrl: './sales-person-list.html',
+  templateUrl: './sales-person-list-bootstrap.html',
   styleUrl: './sales-person-list.css',
 })
 export class SalesPersonList implements OnInit {
