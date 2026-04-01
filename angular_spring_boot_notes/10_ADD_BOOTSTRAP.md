@@ -1,0 +1,54 @@
+# Adding Bootstrap to our Sales Person List Table
+
+# Development Process
+
+## 1. Get the links for the remote Bootstrap files
+
+[www.getbootstrap.com](www.getbootstrap.com)
+
+## 2. Add links to index.html
+
+```html
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="...">
+</head>
+```
+
+## 3. Apply Bootstrap CSS styles in component HTML template
+
+File = src/app/app.html
+```html
+<div class="container">
+    <h1 class="mt-3 mb-3">Sales Team</h1>
+    <app-sales-person-list></app-sales-person-list>
+</div>
+```
+
+## 4. Apply Bootstrap CSS styles in component HTML table
+
+File = src/app/sales-person-list/sales-person-list-bootstrap.component.html
+```html
+<table class="table table-hover">
+    <thead class="table-dark">
+        ...
+    </thead>
+</table>
+```
+
+## 5. Update TypeScript component file to reference Bootstrap HTML template
+
+File = src/app/sales-person-list/sales-person-list.component.ts
+
+```typescript
+import { Component, OnInit } from '@angular/core'; 
+
+@Component({
+    selector: 'app-sales-person-list',
+    templateUrl: './sales-person-list-bootstrap.component.html',
+    styleUrls: ['./sales-person-list.component.css']
+})
+export class SalesPersonListComponent implements OnInit {
+    // ...
+}
+```
