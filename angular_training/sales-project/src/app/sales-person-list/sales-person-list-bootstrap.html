@@ -5,16 +5,21 @@
             <th>Last Name</th>
             <th>Email</th>
             <th>Sales Volume</th>
+            <th>Met Quota?</th>
         </tr>
     </thead>
 
-    <!-- Especial Angular Directive: *ngFor -->
+    <!-- Special Angular Directive: *ngFor -->
     <tbody>
         <tr *ngFor="let tmpSalesPerson of salesPersonList">
             <td>{{ tmpSalesPerson.firstName }}</td>
             <td>{{ tmpSalesPerson.lastName }}</td>
             <td>{{ tmpSalesPerson.email }}</td>
-            <td>{{ tmpSalesPerson.salesVolume }}</td>
+            <td>{{ tmpSalesPerson.salesVolume | currency:'USD' }}</td>
+            <td>
+                <div *ngIf="tmpSalesPerson.salesVolume >= 60000; else myElseBlock">YES</div>
+                <ng-template #myElseBlock>NO</ng-template>
+            </td>
         </tr>
     </tbody>
 </table>
