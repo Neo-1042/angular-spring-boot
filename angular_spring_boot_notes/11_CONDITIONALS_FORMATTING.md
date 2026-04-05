@@ -48,3 +48,19 @@ You send data to a pipe for formatting:
 
 Angular offers more types of pipes for formatting, such as:  
 `DatePipe, DecimalPipe`.
+
+# *ngClass to Apply a Background Color
+
+```html
+<div [ngClass]="{
+    'class1': condition  (TRUE)
+    'class2': !condition (FALSE)
+}">
+</div>
+```
+Example: File = src/app/sales-person-list/sales-person-list-bootstrap.component.html
+```html
+<tbody>
+    <tr *ngFor="let tmpSalesPerson of salesPersonList" [ngClass]="{'highlight': tmpSalesPerson.salesVolume >= 60000}">
+    <!-- ... -- >
+```
