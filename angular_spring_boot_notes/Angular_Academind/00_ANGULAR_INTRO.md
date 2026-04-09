@@ -39,3 +39,12 @@ identified by custom HTML elements.
 2. Components
 3. Object-Oriented Programming
 4. TypeScript
+
+# Angular History
+
+- Angular 1 AKA "AngularJS" (significantly different from)  
+- Angular 2 -> 2016. (V3 is skipped)
+- ...  
+- Angular 14 & 15 -> 2022. Introduced **Standalone Components**.
+- Angular 16 -> 2023. Introduced **Signals**.
+
