@@ -48,3 +48,14 @@ identified by custom HTML elements.
 - Angular 14 & 15 -> 2022. Introduced **Standalone Components**.
 - Angular 16 -> 2023. Introduced **Signals**.
 
+# Zoneless Mode (Angular v21+)
+
+> Note: What you learn throughout the course will apply to Angular
+in general, no matter the version, but to follow along, create
+new projects like this:
+
+```bash
+# Angular v21+
+# This will give you a project in "zoneless" mode
+ng new first-angular-app --no-zoneless
+```
