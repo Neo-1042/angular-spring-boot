@@ -19,3 +19,13 @@ new projects like this:
 # This will give you a project in "zoneless" mode
 ng new first-angular-app --no-zoneless
 ```
+
+Note 1: The following sections inside  
+`angular-spring-boot/angular_training/00_Angular_Legacy`
+will not use standalone components and signals.  
+Note 2: This Legacy sections do NOT use Angular's
+"Strict Mode". You should create projects with the
+`--standalone=false` flag:
+```bash
+ng new my-project --standalone false
+```
