@@ -52,6 +52,7 @@ File = src/app/app.component.ts
 ```typescript
 import { Component } from '@angular/core';
 
+// This is a decorator: (like Java's annotations)
 @Component({
     selector: 'app-root',
     standalone: true,
@@ -60,4 +61,37 @@ import { Component } from '@angular/core';
     styleUrl: './app.component.css',
 })
 export class AppComponent {}
+```
+
+# Create a Custom Component
+
+Add: 
+1. `src/app/header.component.ts`
+```typescript
+import { Component } from '@angular/core';
+
+// selector = Which elements should be controlled/replaced?
+// standalone: true (necessary for Angular < 19)
+// standalone: false -> For Module-Based Components (legacy)
+@Component({
+    selector: 'app-header',
+    standalone: true,
+    templateUrl: './header.component.html',
+})
+export class HeaderComponent {
+
+}
+```
+2. `src/app/header.component.html`
+```html
+<header>
+    <h1>Easy Task</h1>
+</header>
+```
+
+<u>Note</u>: Components are created as classes (you create
+blueprints for custom HTML elements), but **it's Angular that
+actually instantiates the classes** in the end. You never call:
+```typescript
+new SomeComponent(); // Nope
 ```
